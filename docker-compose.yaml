@@ -15,7 +15,8 @@ services:
       - default
     volumes:
       - ./extensions:/opt/connect/custom-extensions
-
+      - mirth-connect-data:/opt/connect/appdata
+      
   db:
     image: postgres
     container_name: mirth-db
@@ -25,6 +26,12 @@ services:
       - "5432:5432"
     networks:
       - default
+    volumes:
+      - mirth-db-data:/var/lib/postgresql/data
+
+volumes:
+  mirth-connect-data:
+  mirth-db-data:
 
 networks:
   default:
