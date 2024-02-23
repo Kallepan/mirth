@@ -27,6 +27,11 @@ Both services are part of the default network.
 
 Please ensure Docker and Docker Compose are installed and running on your machine before you try to start the services.
 
+### Default Login Credentials
+
+- Username: admin
+- Password: admin
+
 ## Ports
 
 The following ports are exposed:
